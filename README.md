@@ -1,4 +1,5 @@
 # HuffmanTextZip
+
 **HuffTextZip** is a simple file compression and decompression tool built using the Huffman coding algorithm. It is designed to work specifically with plain text files (`.txt`), reducing their size by encoding frequently used characters with shorter binary codes.
 
 ## Features
@@ -17,61 +18,58 @@
 
 ## Setup and Compilation
 
-Place all `.cpp` and `.h` files in a single directory, along with the input text file.
+Place all `.cpp` and `.h` files in a single directory, along with your input text file.
 
-###Run the following command to compile and run the code:
+### Compilation
 
-  g++ -o huffman.exe huffman.cpp main.cpp
+Open your terminal or command prompt and run the following command to compile the code:
 
-After compilation :
+```bash
+g++ -o huffman huffman.cpp main.cpp
+```
 
-# Compression:
-  run the command :    ./huffman
-  
-  -Enter your choice as 1 (for compression)
-  
-  -Enter the input text file name and the desired name for the compressed output
-  
-  -The program compresses the file and displays the compression time and ratio
-  
-  Example:
-  
-  -Input file:   input.txt
-  
-  -Compressed file:   compressed.txt.huff   (recommended format)
-  
-# Decompression:
+*(Note: On Windows, this will create `huffman.exe`. On Linux/macOS, it will create `huffman`.)*
 
-  run the command :    ./huffman
-  
-  -Enter your choice as 2 (for decompression)
-  
-  -Enter the compressed file name and the desired name for the decompressed output file.
-  
-  -The program decompresses the file and shows the decompression time
-  
-  Example:
-  
-  -Compressed file:    compressed.txt.huff
-  
-  -Decompressed file:    output.txt
-  
-# Metrics:
+## Usage
 
-  The program prints:
-  
-    -Compression Time
-    
-    -Decompression Time
-    
-    -Compression Ratio
+After compiling the program, you can run it to compress or decompress files.
 
+### Running the Program
 
-# Sample Test
-  Input file:   input.txt
-  
-  Compressed file:   compressed.txt.huff
-  
-  Decompressed file:   output.txt
+Execute the following command in your terminal:
 
-* * You can verify that output.txt exactly matches input.txt, proving the process is lossless.
+```bash
+./huffman
+```
+
+*(Note: On Windows Command Prompt, you might just need to run `huffman` or `huffman.exe`)*
+
+### 1. Compression
+
+1. When prompted, select option **1** (Compression).
+2. Enter the name of the file you want to compress (e.g., `input.txt`).
+3. Enter the desired name for the compressed output file (e.g., `compressed.huff`).
+
+The program will compress the file and display the compression time and ratio.
+
+### 2. Decompression
+
+1. Run the program again and select option **2** (Decompression).
+2. Enter the name of the compressed file (e.g., `compressed.huff`).
+3. Enter the desired name for the decompressed output file (e.g., `output.txt`).
+
+The program will decompress the file and show the decompression time.
+
+## Metrics
+
+After processing, the program prints useful statistics:
+- **Compression Time**: Time taken to encode the file.
+- **Decompression Time**: Time taken to decode the file.
+- **Compression Ratio**: The size reduction achieved.
+
+## Sample Test
+
+1. Create a text file named `input.txt` with some content.
+2. Run the program to compress it into `compressed.huff`.
+3. Run the program again to decompress `compressed.huff` into `output.txt`.
+4. **Verification**: Check that `output.txt` exactly matches `input.txt`. This proves the compression and decompression process is lossless.
